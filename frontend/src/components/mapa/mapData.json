@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Punto de Acopio A",
+    "lat": -16.39889,
+    "lng": -71.535
+  },
+  {
+    "id": 2,
+    "name": "Punto de Acopio B",
+    "lat": -16.405,
+    "lng": -71.54
+  },
+  {
+    "id": 3,
+    "name": "Punto de Acopio C",
+    "lat": -16.41,
+    "lng": -71.53
+  }
+]

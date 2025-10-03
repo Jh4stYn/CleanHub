@@ -1,0 +1,82 @@
+.home-container {
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.home-title {
+  font-size: 1.8rem;
+  color: #2c7a7b;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c53030;
+}
+
+/* mapa + opciones */
+.home-main {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Mapa grande */
+.map-container {
+  flex: 2;
+  min-height: 400px;
+  background-color: #e0f7fa;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-placeholder {
+  color: #2c7a7b;
+  font-weight: bold;
+}
+
+/* Opciones al lado */
+.home-options {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s;
+}
+
+.home-card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home-main {
+    flex-direction: column;
+  }
+
+  .map-container {
+    min-height: 300px;
+  }
+}

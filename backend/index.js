@@ -4,6 +4,9 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const cors = require("cors");
+app.use(cors());
+
 // Middlewares
 app.use(express.json());
 
@@ -16,9 +19,11 @@ pool.connect()
 
 // Rutas
 const userRoutes = require('./src/routes/user.routes');
+const puntosRouter = require("./src/routes/puntos");
 
 // Registrar rutas
 app.use('/usuarios', userRoutes);
+app.use("/api/puntos", puntosRouter);
 
 // Ruta principal
 app.get('/', (req, res) => {

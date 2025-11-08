@@ -1,6 +1,8 @@
 // Importaciones básicas
+require('dotenv').config();
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Middlewares
 app.use(express.json());
@@ -20,9 +22,10 @@ app.use('/usuarios', userRoutes);
 
 // Ruta principal
 app.get('/', (req, res) => {
-  res.send('Backend funcionando correctamente');
+  res.send("Servidor funcionando");
 });
 
 // Configuración del servidor
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Servidor escuchando en puerto ${port}`));
+app.listen(PORT, () => {
+  console.log("Servidor escuchando en puerto", PORT);
+});
